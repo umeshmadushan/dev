@@ -21,12 +21,15 @@
     <!-- AOS animation -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         font-family: Arial, sans-serif;
         background-color: #f3f3f3;
         background-image: radial-gradient(circle, #ccc 1px, transparent 1px);
-        background-size: 20px 20px; /* Adjust the size of the dots */
-        scroll-behavior: smooth;
+        background-size: 20px 20px;
       }
 
       .body-section {
@@ -51,6 +54,7 @@
       }
       .hero-section .btn {
         margin: 10px;
+        padding: 5px 30px;
       }
       .endeavors-section {
         min-height: 100vh;
@@ -60,7 +64,7 @@
         align-items: center;
         height: auto;
         text-align: center;
-        padding: 50px;
+        padding-top: 100px;
       }
       .endeavors-section h2 {
         font-size: 2.5em;
@@ -145,6 +149,23 @@
         border: none;
         margin-top: 20px;
       }
+      .navbar-toggler-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media (max-width: 980px) {
+        .card_container {
+          width: 50%;
+        }
+      }
+
+      @media (max-width: 660px) {
+        .card_container {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -161,7 +182,9 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"
+          ><i class="fa-solid fa-bars"></i
+        ></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
@@ -191,12 +214,14 @@
           Infusing Creativity and Magic into <br />
           <span class="text-primary">App Development & Web Development.</span>
         </h1>
-        <p>Crafting Dynamic Experiences with Flutter and Laravel Mastery</p>
+        <p class="opacity-50">
+          Crafting Dynamic Experiences with Flutter and Laravel Mastery
+        </p>
         <a href="#" class="btn"
           ><img class="coffee_btn" src="bmc-button.png" alt=""
         /></a>
         <a href="#endeavors" class="btn btn-primary"
-          >Endeavors <i class="fa-solid fa-angles-down fa-beat-fade"></i
+          >Endeavors <i class="fa-solid fa-angles-down fa-beat-fade ml-2"></i
         ></a>
       </section>
 
@@ -208,14 +233,9 @@
         data-aos-duration="1000"
       >
         <h2 class="font-bold">Endeavors</h2>
-        <p>
-          Tailus v2 is Coming soon! This block is among a set of 50+ redesigned
-          blocks that support dark mode.
-        </p>
-        <!-- <a href="#" class="btn btn-primary">Notify me when released!</a> -->
         <div class="container mt-4">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 card_container">
               <div class="card custom-card">
                 <img
                   src="https://via.placeholder.com/500x300"
@@ -234,7 +254,7 @@
                   </p>
                   <div class="languages mt-3">
                     <span
-                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medmiu text-gray-600 ring-1 ring-inset ring-gray-500/10"
                       >JavaScript</span
                     >
                     <span
@@ -255,8 +275,7 @@
                 </div>
               </div>
             </div>
-
-            <div class="col-md-4">
+<div class="col-md-4 card_container">
               <div class="card custom-card">
                 <img
                   src="https://via.placeholder.com/500x300"
@@ -275,7 +294,7 @@
                   </p>
                   <div class="languages mt-3">
                     <span
-                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medmiu text-gray-600 ring-1 ring-inset ring-gray-500/10"
                       >JavaScript</span
                     >
                     <span
@@ -296,7 +315,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 card_container">
               <div class="card custom-card">
                 <img
                   src="https://via.placeholder.com/500x300"
@@ -315,7 +334,7 @@
                   </p>
                   <div class="languages mt-3">
                     <span
-                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medmiu text-gray-600 ring-1 ring-inset ring-gray-500/10"
                       >JavaScript</span
                     >
                     <span
@@ -336,7 +355,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 card_container">
               <div class="card custom-card">
                 <img
                   src="https://via.placeholder.com/500x300"
@@ -355,7 +374,7 @@
                   </p>
                   <div class="languages mt-3">
                     <span
-                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medmiu text-gray-600 ring-1 ring-inset ring-gray-500/10"
                       >JavaScript</span
                     >
                     <span
@@ -376,7 +395,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 card_container">
               <div class="card custom-card">
                 <img
                   src="https://via.placeholder.com/500x300"
@@ -395,7 +414,7 @@
                   </p>
                   <div class="languages mt-3">
                     <span
-                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medmiu text-gray-600 ring-1 ring-inset ring-gray-500/10"
                       >JavaScript</span
                     >
                     <span
@@ -416,7 +435,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 card_container">
               <div class="card custom-card">
                 <img
                   src="https://via.placeholder.com/500x300"
@@ -435,7 +454,7 @@
                   </p>
                   <div class="languages mt-3">
                     <span
-                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medmiu text-gray-600 ring-1 ring-inset ring-gray-500/10"
                       >JavaScript</span
                     >
                     <span
@@ -456,7 +475,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 card_container">
               <div class="card custom-card">
                 <img
                   src="https://via.placeholder.com/500x300"
@@ -475,7 +494,7 @@
                   </p>
                   <div class="languages mt-3">
                     <span
-                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medmiu text-gray-600 ring-1 ring-inset ring-gray-500/10"
                       >JavaScript</span
                     >
                     <span
@@ -496,7 +515,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 card_container">
               <div class="card custom-card">
                 <img
                   src="https://via.placeholder.com/500x300"
@@ -515,7 +534,7 @@
                   </p>
                   <div class="languages mt-3">
                     <span
-                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medmiu text-gray-600 ring-1 ring-inset ring-gray-500/10"
                       >JavaScript</span
                     >
                     <span
@@ -536,7 +555,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 card_container">
               <div class="card custom-card">
                 <img
                   src="https://via.placeholder.com/500x300"
@@ -555,7 +574,7 @@
                   </p>
                   <div class="languages mt-3">
                     <span
-                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+                      class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medmiu text-gray-600 ring-1 ring-inset ring-gray-500/10"
                       >JavaScript</span
                     >
                     <span
