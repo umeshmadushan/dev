@@ -154,6 +154,24 @@
         justify-content: center;
         align-items: center;
       }
+      .navbar-toggler-icon i.fa-bars {
+        display: block;
+      }
+      .navbar-toggler-icon i.fa-times {
+        display: none;
+      }
+      .navbar-toggler.collapsed .fa-bars {
+        display: block;
+      }
+      .navbar-toggler.collapsed .fa-times {
+        display: none;
+      }
+      .navbar-toggler:not(.collapsed) .fa-bars {
+        display: none;
+      }
+      .navbar-toggler:not(.collapsed) .fa-times {
+        display: block;
+      }
       .card_container {
         transition: transform 0.7s;
       }
@@ -176,16 +194,19 @@
         .hero-section h1 {
           font-size: 35px;
         }
-        .copyright{
+        .about-section p {
+          font-size: 16px;
+        }
+        .copyright {
           font-size: 8px;
         }
-        .copyright img{
+        .copyright img {
           height: 12px;
         }
-        .social{
+        .social {
           font-size: 15px;
         }
-        .terms{
+        .terms {
           font-size: 8px;
         }
       }
@@ -193,11 +214,11 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg fixed-top">
-      <a class="navbar-brand" href="#"
-        ><img class="logo" src="logo.png" alt="Logo"
-      /></a>
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="logo.png" alt="Logo" />
+      </a>
       <button
-        class="navbar-toggler"
+        class="navbar-toggler collapsed"
         type="button"
         data-toggle="collapse"
         data-target="#navbarNav"
@@ -205,9 +226,10 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"
-          ><i class="fa-solid fa-bars"></i
-        ></span>
+        <span class="navbar-toggler-icon">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-times"></i>
+        </span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
@@ -709,6 +731,13 @@
         } else {
           $(".navbar").removeClass("scrolled");
         }
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $(this).toggleClass("collapsed");
+        });
       });
     </script>
   </body>
